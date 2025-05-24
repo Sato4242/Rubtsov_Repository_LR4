@@ -67,3 +67,16 @@ void showMenu() {
         << "5. Выход\n"
         << "Выберите действие: ";
 }
+
+int inputDigitD() {
+    int D;
+    while (true) {
+        cout << "Введите цифру D (1-9): ";
+        if (cin >> D && D >= 1 && D <= 9) {
+            return D;
+        }
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Ошибка! ";
+    }
+}
